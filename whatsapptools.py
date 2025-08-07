@@ -139,7 +139,8 @@ class WhatsAppDriver:
             list_wrong_numbers.append(number)
             time.sleep(2)
      except Exception as e:
-        print("enter the corretc image path")
+      return "enter the corretc image path"
+     
 
 # ✅ Phone numbers to message
 MESSAGE = "Hello, this is a test message from Python automation!"
@@ -147,7 +148,8 @@ IMAGE_PATH = "C:/full/path/to/image.jpg"  # Use absolute path
 numbers = ["21423", "7406073514", "6235305505", "9744080036"]
 wts=WhatsAppDriver()
 for number in numbers:
-    wts.send_message_img_to_contact(number, MESSAGE,IMAGE_PATH)
+    wts.send_message_to_contact(number, MESSAGE,IMAGE_PATH)
+    
 # ✅ Log summary
 print("\n=== SUMMARY ===")
 print("✅ Successful:", successful_numbers)
